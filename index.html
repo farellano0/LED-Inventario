@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inventario LED</title>
+</head>
+<body>
+    <style>
+        h1 {
+            text-align: center;
+            color: brown;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, sans-serif;
+        }
+
+        label {
+            display: block;
+        }
+
+        input {       
+            padding: 3px;
+            margin: 5px 0;   
+            border-radius: 4px;
+        }
+
+        button { 
+            margin: 5px 0;
+            width: 14%;
+            padding: 5px;
+            display: block;
+        }
+
+        table {
+            width: 60%;
+            float: left;
+        }
+        td {
+            text-align: center;
+        }
+
+        .details{
+            width: 30%;
+            float: right;
+        }
+
+        .container {
+            width: 95%;
+            float: left;
+        }
+
+        .details {
+            text-align: center;
+        }
+        
+        .button{
+            font-weight: bold;
+            width: 150px;
+        }
+    </style>
+
+    <h1>Inventario</h1>
+
+    <div class="container">
+        <div id="app">
+            <form>
+                <div>
+                    <label for="txtCode">Código:</label>
+                    <input type="number" name="txtCode" id="txtCode">
+                </div>
+                <div>
+                    <label for="txtName">Nombre del Producto:</label>
+                    <input type="text" name="txtName" id="txtName">
+                </div>
+                <div>
+                    <label for="txtAmount">Cantidad:</label>
+                    <input type="number" name="txtAmount" id="txtAmount">
+                </div>
+                <div>
+                    <label for="txtCost">Costo:</label>
+                    <input type="number" name="txtCost" id="txtCost">
+                </div>
+                <div class="field">
+                    <input class="button" id="btnRegister" type="button" value="Registrar" />
+                    <br>
+                    <input class="button" id="btnSrch" type="button" value="Buscar" />
+                    <input id="insertCodeSearch" type="number" placeholder="Código de producto">
+                    <br>
+                    <input class="button" id="btnDelete" type="button" value="Borrar" />
+                    <input id="insertCode" type="number" placeholder="Código de producto">
+                    <br>
+                    <input class="button" id="btnList" type="button" value="Listar" />
+                    <input class="button" id="btnListInverse" type="button" value="Listar Inverso" />
+                  </div>
+            </form>
+        </div>
+    </div>
+    <div class="details" id="details">
+        <h1>Acciones</h1>
+        <div id="actions">
+
+        </div>
+    </div>
+    <div>
+        <h1>Tabla de Productos</h1>
+        <table id="table">
+            <tr>
+                <th>Código</th>
+                <th>Producto</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th>Precio Total</th>
+            </tr>
+        </table>
+    </div>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
